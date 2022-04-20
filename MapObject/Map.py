@@ -94,10 +94,7 @@ class Map():
                 f'{args_name[2]} takes 2 positional arguments but 3 were given')
 
         for el in self.list:
-            if args_len == 1:
-                callbackFn(el[1])
-            elif args_len == 2:
-                callbackFn(el[1], el[0])
+            callbackFn(el[1]) if args_len == 1 else callbackFn(el[1], el[0])
 
 
 class Advanced_Map(Map):
