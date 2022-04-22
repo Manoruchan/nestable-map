@@ -97,5 +97,9 @@ class Map():
             callbackFn(el[1]) if args_len == 1 else callbackFn(el[1], el[0])
 
 
-class Advanced_Map(Map):
-    pass
+class AdvMap(Map):
+    def __init__(self, array=[], args):
+        super().__init__(array)
+        
+        self.path = args.path
+        self.autoSave = args.autoSave
